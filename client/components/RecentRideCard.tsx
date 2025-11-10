@@ -2,11 +2,11 @@ import { Zap, Navigation2, Clock } from "lucide-react";
 
 export default function RecentRideCard() {
   return (
-    <div className="w-full group">
+    <div className="w-full">
       {/* Card with shadow and depth */}
-      <div className="bg-gradient-to-br from-moto-orange to-moto-orange-dark rounded-3xl overflow-hidden shadow-2xl hover:shadow-moto-orange/50 transition-all duration-300 transform hover:scale-105">
+      <div className="bg-gradient-to-br from-moto-orange to-moto-orange-dark rounded-2xl overflow-hidden shadow-xl active:shadow-lg transition-shadow">
         {/* Header with gradient overlay */}
-        <div className="relative h-40 bg-gradient-to-b from-black/30 to-black/60 overflow-hidden">
+        <div className="relative h-32 bg-gradient-to-b from-black/30 to-black/60 overflow-hidden">
           {/* Motorcycle silhouette background */}
           <div className="absolute inset-0 flex items-center justify-center opacity-10">
             <svg
@@ -22,49 +22,49 @@ export default function RecentRideCard() {
           </div>
 
           {/* Stats overlay */}
-          <div className="relative h-full flex flex-col justify-between p-5">
+          <div className="relative h-full flex flex-col justify-between p-4">
             <div>
-              <p className="text-white/80 text-xs font-poppins uppercase tracking-wider">
+              <p className="text-white/80 text-[11px] font-poppins uppercase tracking-wider">
                 Last Ride
               </p>
-              <h3 className="text-white text-xl font-bold font-poppins mt-1">
+              <h3 className="text-white text-lg font-bold font-poppins mt-0.5">
                 Mountain Loop
               </h3>
             </div>
 
             {/* Stats grid */}
-            <div className="grid grid-cols-3 gap-3">
-              <div className="bg-black/40 backdrop-blur rounded-lg p-2">
-                <div className="flex items-center gap-1 mb-1">
-                  <Navigation2 className="w-3.5 h-3.5 text-moto-accent" />
-                  <span className="text-white/60 text-[10px]">Distance</span>
+            <div className="grid grid-cols-3 gap-2">
+              <div className="bg-black/40 backdrop-blur rounded-lg p-1.5">
+                <div className="flex items-center gap-0.5 mb-0.5">
+                  <Navigation2 className="w-3 h-3 text-moto-accent" />
+                  <span className="text-white/60 text-[9px]">Distance</span>
                 </div>
-                <p className="text-white font-bold text-sm">42.5 km</p>
+                <p className="text-white font-bold text-xs">42.5 km</p>
               </div>
-              <div className="bg-black/40 backdrop-blur rounded-lg p-2">
-                <div className="flex items-center gap-1 mb-1">
-                  <Zap className="w-3.5 h-3.5 text-moto-accent" />
-                  <span className="text-white/60 text-[10px]">Avg Speed</span>
+              <div className="bg-black/40 backdrop-blur rounded-lg p-1.5">
+                <div className="flex items-center gap-0.5 mb-0.5">
+                  <Zap className="w-3 h-3 text-moto-accent" />
+                  <span className="text-white/60 text-[9px]">Speed</span>
                 </div>
-                <p className="text-white font-bold text-sm">78 km/h</p>
+                <p className="text-white font-bold text-xs">78 km/h</p>
               </div>
-              <div className="bg-black/40 backdrop-blur rounded-lg p-2">
-                <div className="flex items-center gap-1 mb-1">
-                  <Clock className="w-3.5 h-3.5 text-moto-accent" />
-                  <span className="text-white/60 text-[10px]">Duration</span>
+              <div className="bg-black/40 backdrop-blur rounded-lg p-1.5">
+                <div className="flex items-center gap-0.5 mb-0.5">
+                  <Clock className="w-3 h-3 text-moto-accent" />
+                  <span className="text-white/60 text-[9px]">Time</span>
                 </div>
-                <p className="text-white font-bold text-sm">32 min</p>
+                <p className="text-white font-bold text-xs">32 min</p>
               </div>
             </div>
           </div>
         </div>
 
         {/* Action button */}
-        <div className="bg-black/20 backdrop-blur px-5 py-4 flex justify-between items-center">
-          <span className="text-white font-poppins font-semibold text-sm">
+        <div className="bg-black/20 backdrop-blur px-4 py-3 flex justify-between items-center gap-3">
+          <span className="text-white font-poppins font-semibold text-xs">
             Ready for another?
           </span>
-          <button className="bg-white text-moto-orange hover:bg-moto-accent transition-colors px-6 py-2 rounded-full font-bold font-poppins text-sm shadow-lg">
+          <button className="bg-white text-moto-orange active:bg-gray-100 transition-colors px-5 py-1.5 rounded-full font-bold font-poppins text-xs shadow-lg flex-shrink-0">
             Ride Again
           </button>
         </div>
