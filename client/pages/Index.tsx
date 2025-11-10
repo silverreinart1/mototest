@@ -42,31 +42,29 @@ export default function Index() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-moto-dark via-moto-dark-lighter to-moto-dark pb-32">
+    <div className="min-h-screen bg-gradient-to-b from-moto-dark via-moto-dark-lighter to-moto-dark pb-32 w-screen overflow-x-hidden">
       {/* Header */}
-      <div className="bg-gradient-to-b from-black to-moto-dark pt-6 pb-8">
-        <div className="max-w-4xl mx-auto px-4">
-          <div className="flex items-center justify-between mb-2">
-            <div>
-              <p className="text-moto-orange text-xs font-poppins uppercase tracking-widest font-bold">
-                Welcome back, rider
-              </p>
-              <h1 className="text-white text-3xl font-bold font-poppins">
-                MotoRadar
-              </h1>
-            </div>
-            <div className="w-12 h-12 rounded-full bg-gradient-to-br from-moto-orange to-moto-orange-dark flex items-center justify-center shadow-lg">
-              <Flame className="w-6 h-6 text-white" />
-            </div>
+      <div className="bg-gradient-to-b from-black to-moto-dark pt-5 pb-6 px-4">
+        <div className="flex items-center justify-between">
+          <div>
+            <p className="text-moto-orange text-[10px] font-poppins uppercase tracking-wider font-bold">
+              Welcome back, rider
+            </p>
+            <h1 className="text-white text-2xl font-bold font-poppins">
+              MotoRadar
+            </h1>
+          </div>
+          <div className="w-11 h-11 rounded-full bg-gradient-to-br from-moto-orange to-moto-orange-dark flex items-center justify-center shadow-lg flex-shrink-0">
+            <Flame className="w-5 h-5 text-white" />
           </div>
         </div>
       </div>
 
       {/* Main content */}
-      <div className="max-w-4xl mx-auto px-4 pt-8 space-y-8">
+      <div className="w-full px-4 pt-6 space-y-6">
         {/* Recent Ride Section */}
         <div>
-          <h2 className="text-white font-poppins font-bold text-lg mb-4 uppercase tracking-wide">
+          <h2 className="text-white font-poppins font-bold text-sm mb-3 uppercase tracking-wider">
             Your Last Ride
           </h2>
           <RecentRideCard />
@@ -74,15 +72,15 @@ export default function Index() {
 
         {/* Friends Section */}
         <div>
-          <div className="flex items-center justify-between mb-5">
-            <h2 className="text-white font-poppins font-bold text-lg uppercase tracking-wide">
+          <div className="flex items-center justify-between mb-4">
+            <h2 className="text-white font-poppins font-bold text-sm uppercase tracking-wider">
               Riding Squad
             </h2>
             <span className="text-moto-orange text-xs font-poppins font-bold">
               {friends.length} Riders
             </span>
           </div>
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-6">
+          <div className="grid grid-cols-3 gap-4">
             {friends.map((friend, idx) => (
               <RiderAvatar
                 key={idx}
@@ -97,15 +95,15 @@ export default function Index() {
 
         {/* Upcoming Events Section */}
         <div>
-          <div className="flex items-center justify-between mb-5">
-            <h2 className="text-white font-poppins font-bold text-lg uppercase tracking-wide">
-              Upcoming Group Rides
+          <div className="flex items-center justify-between mb-4">
+            <h2 className="text-white font-poppins font-bold text-sm uppercase tracking-wider">
+              Group Rides
             </h2>
             <span className="text-moto-orange text-xs font-poppins font-bold">
-              {upcomingRides.length} Events
+              {upcomingRides.length}
             </span>
           </div>
-          <div className="grid gap-4">
+          <div className="space-y-3">
             {upcomingRides.map((ride, idx) => (
               <RideEventCard key={idx} {...ride} />
             ))}
@@ -113,17 +111,17 @@ export default function Index() {
         </div>
 
         {/* Leaderboard teaser */}
-        <div className="bg-gradient-to-r from-moto-orange/10 to-moto-accent/10 border border-moto-orange/20 rounded-2xl p-6 text-center group hover:border-moto-orange/50 transition-all">
-          <p className="text-moto-orange font-poppins font-bold uppercase tracking-wider text-sm mb-2">
+        <div className="bg-gradient-to-r from-moto-orange/10 to-moto-accent/10 border border-moto-orange/20 rounded-xl p-4 text-center">
+          <p className="text-moto-orange font-poppins font-bold uppercase tracking-wider text-xs mb-1">
             🏆 Top Performer
           </p>
-          <h3 className="text-white text-lg font-bold font-poppins mb-2">
-            You're in the top 15% this month!
+          <h3 className="text-white text-base font-bold font-poppins mb-2">
+            Top 15% this month!
           </h3>
-          <p className="text-gray-400 text-sm mb-4">
-            Keep riding and climb the leaderboard
+          <p className="text-gray-400 text-xs mb-3">
+            Keep riding to climb higher
           </p>
-          <button className="bg-gradient-to-r from-moto-orange to-moto-orange-dark hover:shadow-lg hover:shadow-moto-orange/50 text-white font-poppins font-bold px-6 py-2 rounded-lg transition-all transform hover:scale-105">
+          <button className="w-full bg-gradient-to-r from-moto-orange to-moto-orange-dark active:scale-95 text-white font-poppins font-bold py-2 rounded-lg transition-all">
             View Leaderboard
           </button>
         </div>
