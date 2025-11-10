@@ -25,35 +25,35 @@ export default function RiderAvatar({
   const colorIndex = initials.charCodeAt(0) % colors.length;
 
   return (
-    <div className="flex flex-col items-center gap-2">
+    <div className="flex flex-col items-center gap-1.5">
       <div className="relative">
         {/* Avatar circle */}
         <div
-          className={`w-16 h-16 rounded-full ${colors[colorIndex]} flex items-center justify-center text-white font-bold text-lg shadow-lg border-2 ${
+          className={`w-14 h-14 rounded-full ${colors[colorIndex]} flex items-center justify-center text-white font-bold text-base shadow-lg border-2 ${
             isActive ? "border-moto-accent" : "border-moto-orange"
-          } transition-all hover:shadow-xl hover:scale-110`}
+          } active:shadow-md transition-shadow`}
         >
           {initials}
         </div>
 
         {/* Online indicator */}
         {isActive && (
-          <div className="absolute bottom-0 right-0 w-4 h-4 bg-green-500 rounded-full border-2 border-white shadow-md" />
+          <div className="absolute bottom-0 right-0 w-3.5 h-3.5 bg-green-500 rounded-full border-2 border-white shadow-md" />
         )}
 
         {/* Rating star */}
-        <div className="absolute -top-1 -right-1 bg-moto-orange rounded-full p-1 shadow-md">
-          <Star className="w-3 h-3 text-white fill-white" />
+        <div className="absolute -top-0.5 -right-0.5 bg-moto-orange rounded-full p-0.5 shadow-md">
+          <Star className="w-2.5 h-2.5 text-white fill-white" />
         </div>
       </div>
 
       <div className="text-center">
-        <p className="text-xs font-poppins font-semibold text-gray-900 truncate w-16">
+        <p className="text-[11px] font-poppins font-semibold text-gray-100 truncate w-14">
           {name}
         </p>
         <div className="flex items-center justify-center gap-0.5 mt-0.5">
-          <Star className="w-2.5 h-2.5 text-moto-orange fill-moto-orange" />
-          <span className="text-[10px] font-poppins font-bold text-moto-orange">
+          <Star className="w-2 h-2 text-moto-orange fill-moto-orange" />
+          <span className="text-[9px] font-poppins font-bold text-moto-orange">
             {rating.toFixed(1)}
           </span>
         </div>
