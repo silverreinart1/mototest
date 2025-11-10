@@ -3,7 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 
 export default function BottomNav() {
   const location = useLocation();
-  
+
   const navItems = [
     { icon: Home, label: "Home", path: "/" },
     { icon: Users, label: "Participate", path: "/participate" },
@@ -13,27 +13,30 @@ export default function BottomNav() {
   ];
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 bg-[#1D1F24] rounded-t-3xl pb-safe">
-      <div className="flex justify-center items-center px-3 pt-3 pb-0 bg-[#1D1F24]">
+    <div className="fixed bottom-0 left-0 right-0 bg-gradient-to-t from-moto-dark to-moto-dark-lighter rounded-t-3xl pb-safe shadow-2xl">
+      <div className="flex justify-center items-center px-3 pt-3 pb-0 bg-transparent">
         {navItems.map((item) => {
           const Icon = item.icon;
           const isActive = location.pathname === item.path;
-          
+
           return (
             <Link
               key={item.path}
               to={item.path}
-              className="flex flex-col items-center gap-1.5 flex-1"
+              className="flex flex-col items-center gap-1.5 flex-1 transition-all transform hover:scale-110"
             >
-              <Icon
-                className={`w-6 h-6 ${
-                  isActive ? "text-white" : "text-[#676D75]"
+              <div
+                className={`p-2 rounded-xl transition-all ${
+                  isActive
+                    ? "bg-moto-orange/20 text-moto-orange"
+                    : "text-gray-500 hover:text-gray-400"
                 }`}
-                strokeWidth={2}
-              />
+              >
+                <Icon className="w-6 h-6" strokeWidth={2} />
+              </div>
               <span
-                className={`text-xs font-poppins ${
-                  isActive ? "text-white" : "text-[#676D75]"
+                className={`text-xs font-poppins font-semibold ${
+                  isActive ? "text-moto-orange" : "text-gray-500"
                 }`}
               >
                 {item.label}
@@ -42,8 +45,8 @@ export default function BottomNav() {
           );
         })}
       </div>
-      <div className="h-7 bg-[#1D1F24] flex items-start justify-center pt-4">
-        <div className="w-[135px] h-[5px] rounded-full bg-[#B9C0C9]" />
+      <div className="h-7 bg-transparent flex items-start justify-center pt-4">
+        <div className="w-[135px] h-[5px] rounded-full bg-moto-charcoal" />
       </div>
     </div>
   );
