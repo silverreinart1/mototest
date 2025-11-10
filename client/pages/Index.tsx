@@ -1,62 +1,45 @@
-import { DemoResponse } from "@shared/api";
-import { useEffect, useState } from "react";
+import BottomNav from "@/components/BottomNav";
+import FriendCard from "@/components/FriendCard";
 
 export default function Index() {
-  const [exampleFromServer, setExampleFromServer] = useState("");
-  // Fetch users on component mount
-  useEffect(() => {
-    fetchDemo();
-  }, []);
-
-  // Example of how to fetch data from the server (if needed)
-  const fetchDemo = async () => {
-    try {
-      const response = await fetch("/api/demo");
-      const data = (await response.json()) as DemoResponse;
-      setExampleFromServer(data.message);
-    } catch (error) {
-      console.error("Error fetching hello:", error);
-    }
-  };
+  const friends = [
+    "Alex Johnson",
+    "Maria Garcia",
+    "David Smith",
+    "Sarah Wilson",
+    "John Davis",
+    "Emma Brown",
+  ];
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-100 to-slate-200">
-      <div className="text-center">
-        {/* TODO: FUSION_GENERATION_APP_PLACEHOLDER replace everything here with the actual app! */}
-        <h1 className="text-2xl font-semibold text-slate-800 flex items-center justify-center gap-3">
-          <svg
-            className="animate-spin h-8 w-8 text-slate-400"
-            viewBox="0 0 50 50"
-          >
-            <circle
-              className="opacity-30"
-              cx="25"
-              cy="25"
-              r="20"
-              stroke="currentColor"
-              strokeWidth="5"
-              fill="none"
-            />
-            <circle
-              className="text-slate-600"
-              cx="25"
-              cy="25"
-              r="20"
-              stroke="currentColor"
-              strokeWidth="5"
-              fill="none"
-              strokeDasharray="100"
-              strokeDashoffset="75"
-            />
-          </svg>
-          Generating your app...
-        </h1>
-        <p className="mt-4 text-slate-600 max-w-md">
-          Watch the chat on the left for updates that might need your attention
-          to finish generating
-        </p>
-        <p className="mt-4 hidden max-w-md">{exampleFromServer}</p>
+    <div className="min-h-screen bg-white pb-32">
+      <div className="max-w-md mx-auto px-4 pt-6 flex flex-col gap-11">
+        {/* Recent Ride Section */}
+        <section className="w-full h-32 rounded-3xl bg-black relative p-5">
+          <div className="w-60 h-24 rounded-[20px] bg-[#505050]" />
+          <button className="absolute bottom-5 right-7 inline-flex px-6 py-3 justify-center items-center rounded-3xl bg-white hover:bg-gray-100 transition-colors">
+            <span className="text-black font-playfair text-xs italic font-bold leading-4">
+              Ride Again
+            </span>
+          </button>
+        </section>
+
+        {/* Friends Section */}
+        <section className="rounded-3xl bg-black p-4">
+          <div className="bg-white rounded-lg p-6">
+            <div className="grid grid-cols-2 gap-x-14 gap-y-5">
+              {friends.map((friend, index) => (
+                <FriendCard key={index} name="Profile pic and name" />
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Suggestion Section */}
+        <section className="w-full h-60 rounded-3xl bg-black" />
       </div>
+
+      <BottomNav />
     </div>
   );
 }
