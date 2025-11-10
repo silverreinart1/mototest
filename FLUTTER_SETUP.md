@@ -38,15 +38,19 @@ Before running this app, you need to install Flutter:
 ## Setup Instructions
 
 ### 1. Verify Flutter Installation
+
 ```bash
 flutter doctor
 ```
+
 This should show:
+
 - ✓ Flutter (Channel stable)
 - ✓ Android toolchain
 - ✓ Android SDK
 
 ### 2. Get Dependencies
+
 ```bash
 cd motoradar
 flutter pub get
@@ -55,6 +59,7 @@ flutter pub get
 ### 3. Configure Android (Android Only)
 
 #### Option A: Using Android Emulator
+
 ```bash
 # List available emulators
 flutter emulators
@@ -66,6 +71,7 @@ flutter emulators --launch <emulator_name>
 ```
 
 #### Option B: Using Physical Device
+
 - Enable **Developer Mode** on your Android phone (tap Build Number 7 times in Settings > About Phone)
 - Enable **USB Debugging** in Developer Options
 - Connect via USB
@@ -77,17 +83,20 @@ flutter emulators --launch <emulator_name>
 ### 4. Run the App
 
 #### On Emulator/Device:
+
 ```bash
 flutter run
 ```
 
 #### On Specific Device:
+
 ```bash
 flutter devices                  # List available devices
 flutter run -d <device_id>       # Run on specific device
 ```
 
 #### Release Build:
+
 ```bash
 flutter build apk --release
 # APK will be in: build/app/outputs/flutter-apk/app-release.apk
@@ -118,20 +127,24 @@ flutter build apk --release
 ## Troubleshooting
 
 ### "Flutter SDK not found"
+
 - Ensure Flutter is properly installed and in your PATH
 - Run: `flutter --version`
 
 ### "Android SDK not found"
+
 - Install Android Studio
 - Run Android Studio once to complete setup
 - Accept all SDK licenses: `flutter doctor --android-licenses`
 
 ### App crashes on startup
+
 - Run: `flutter clean`
 - Then: `flutter pub get`
 - Finally: `flutter run`
 
 ### Permission issues on Android
+
 - In `android/app/src/main/AndroidManifest.xml`, ensure permissions are set
 - Restart the emulator/device
 

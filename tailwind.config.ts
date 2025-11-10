@@ -14,18 +14,18 @@ export default {
     },
     extend: {
       fontFamily: {
-        playfair: ['"Playfair Display"', 'serif'],
-        poppins: ['Poppins', 'sans-serif'],
+        playfair: ['"Playfair Display"', "serif"],
+        poppins: ["Poppins", "sans-serif"],
       },
       colors: {
         moto: {
-          orange: '#FF6B35',
-          'orange-dark': '#E55100',
-          red: '#D32F2F',
-          dark: '#1A1A1A',
-          'dark-lighter': '#2D2D2D',
-          charcoal: '#3A3A3A',
-          accent: '#FFA500',
+          orange: "#FF6B35",
+          "orange-dark": "#E55100",
+          red: "#D32F2F",
+          dark: "#1A1A1A",
+          "dark-lighter": "#2D2D2D",
+          charcoal: "#3A3A3A",
+          accent: "#FFA500",
         },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
