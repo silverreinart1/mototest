@@ -5,6 +5,7 @@ import 'package:motoradar/theme/theme.dart';
 import 'package:motoradar/widgets/recent_ride_card.dart';
 import 'package:motoradar/widgets/rider_avatar.dart';
 import 'package:motoradar/widgets/ride_event_card.dart';
+import 'package:motoradar/widgets/training_module.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -158,7 +159,11 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
                 const SizedBox(height: 12),
                 const RecentRideCard(),
-                const SizedBox(height: 24),
+                const SizedBox(height: 28),
+
+                // Training Module Section
+                const TrainingModule(),
+                const SizedBox(height: 28),
 
                 // Riding Squad Section
                 Row(
