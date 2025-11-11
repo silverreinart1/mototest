@@ -44,6 +44,7 @@ flutter pub get
 **Follow the detailed guide in `FIREBASE_SETUP.md`**
 
 Key steps:
+
 1. Create Firebase project on console.firebase.google.com
 2. Add Android app with package `com.motoradar.app`
 3. Download `google-services.json` → save to `android/app/`
@@ -153,6 +154,7 @@ motoradar/
 ## 🎨 UI Theme
 
 **Colors:**
+
 - Primary Orange: `#FF6B35`
 - Dark Background: `#1A1A1A`
 - Charcoal: `#3A3A3A`
@@ -160,24 +162,28 @@ motoradar/
 - White: `#FFFFFF`
 
 **Fonts:**
+
 - Poppins (Body text)
 - Playfair Display (Headers)
 
 ## 📱 Screens Overview
 
 ### Login Screen
+
 - Email/password input
 - Sign up link
 - Error handling
 - Loading state
 
 ### Sign Up Screen
+
 - Name, email, password fields
 - Password confirmation
 - Validation
 - Firebase registration
 
 ### Home Screen
+
 - Welcome header with flame icon
 - Recent ride card (42.5 km, 78 km/h, 32 min)
 - Riding squad with 6 avatars & ratings
@@ -186,17 +192,20 @@ motoradar/
 - Leaderboard teaser
 
 ### Participate Screen
+
 - My completed rides
 - Available group rides to join
 - Ride details (location, difficulty, time)
 
 ### Map Screen
+
 - Map view placeholder
 - Start/Stop recording button
 - Live stats display (distance, speed, time)
 - Recent ride recordings
 
 ### Profile Screen
+
 - User avatar & info
 - 4 key statistics (rides, distance, speed, days)
 - Bike maintenance logs
@@ -205,6 +214,7 @@ motoradar/
 - Sign out button
 
 ### Exam Prep Screen
+
 - License category info
 - Exam date countdown
 - Study progress by topic
@@ -250,6 +260,7 @@ FirebaseService.getAllRides()
 ## 🧪 Testing
 
 ### Test Login
+
 1. Sign up: `test@example.com` / `password123`
 2. Sign in with same credentials
 3. View profile and ride data
@@ -257,6 +268,7 @@ FirebaseService.getAllRides()
 5. Sign out
 
 ### Test Validation
+
 - Empty fields → Error message
 - Weak password → Error message
 - Password mismatch → Error message
@@ -286,24 +298,28 @@ FirebaseService.getAllRides()
 ## 🐛 Troubleshooting
 
 ### Firebase Not Initializing
+
 ```
 Error: Failed to initialize Firebase
 Solution: Check google-services.json location and firebase_options.dart credentials
 ```
 
 ### Auth State Not Updating
+
 ```
 Error: User stays logged out after sign up
 Solution: Ensure MultiProvider wraps MaterialApp and UserProvider is in providers
 ```
 
 ### Database Write Denied
+
 ```
 Error: Permission denied in database
 Solution: Check database rules and ensure user is authenticated
 ```
 
 ### Build Failures
+
 ```
 Solution: Run these commands
 $ flutter clean
@@ -315,18 +331,21 @@ $ flutter run
 ## 🚀 Deployment
 
 ### Build APK
+
 ```bash
 flutter build apk --release
 # Output: build/app/outputs/flutter-apk/app-release.apk
 ```
 
 ### Build AAB (for Play Store)
+
 ```bash
 flutter build appbundle --release
 # Output: build/app/outputs/bundle/release/app-release.aab
 ```
 
 ### Upload to Play Store
+
 1. Go to Google Play Console
 2. Create app listing
 3. Add app APK/AAB
@@ -344,6 +363,7 @@ flutter build appbundle --release
 ## 📞 Support
 
 For issues:
+
 1. Check `FIREBASE_SETUP.md` for Firebase configuration
 2. Review `Troubleshooting` section above
 3. Check Firebase Console for auth/DB errors

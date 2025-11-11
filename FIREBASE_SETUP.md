@@ -38,6 +38,7 @@ buildscript {
 ### Update `android/app/build.gradle`:
 
 Add at the bottom of the file:
+
 ```gradle
 apply plugin: 'com.google.gms.google-services'
 ```
@@ -124,15 +125,18 @@ Set these rules in Firebase Console → Realtime Database → Rules:
 ## Troubleshooting
 
 ### "Failed to initialize Firebase"
+
 - Ensure `google-services.json` is in `android/app/`
 - Check `firebase_options.dart` has correct credentials
 - Run `flutter clean` and `flutter pub get`
 
 ### "Authentication failed"
+
 - Ensure Email/Password is enabled in Firebase Console
 - Check internet connection
 
 ### "Cannot write to database"
+
 - Check Realtime Database rules
 - Ensure user is authenticated
 
