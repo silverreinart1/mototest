@@ -40,6 +40,7 @@ class MotoRadarApp extends StatelessWidget {
         ),
         routes: {
           '/': (context) => const HomeScreen(),
+          '/login': (context) => const LoginScreen(),
           '/participate': (context) => const ParticipateScreen(),
           '/map': (context) => const MapScreen(),
           '/profile': (context) => const ProfileScreen(),
