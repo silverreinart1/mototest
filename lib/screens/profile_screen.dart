@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:motoradar/theme/theme.dart';
+import 'package:motoradar/providers/user_provider.dart';
+import 'package:motoradar/screens/login_screen.dart';
+import 'package:provider/provider.dart';
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({Key? key}) : super(key: key);
