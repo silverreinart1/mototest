@@ -1,0 +1,1 @@
+ /home/silver/mototest/.dart_tool/flutter_build/51b8b5661abcebe4c045f2cd4cd47bb7/native_assets.yaml: 

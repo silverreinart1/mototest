@@ -1,0 +1,12 @@
+/home/silver/mototest/build/linux/x64/debug/bundle/mototest
+/home/silver/mototest/build/linux/x64/debug/bundle/data/icudtl.dat
+/home/silver/mototest/build/linux/x64/debug/bundle/lib/libflutter_linux_gtk.so
+/home/silver/mototest/build/linux/x64/debug/bundle/data/flutter_assets/fonts/MaterialIcons-Regular.otf
+/home/silver/mototest/build/linux/x64/debug/bundle/data/flutter_assets/FontManifest.json
+/home/silver/mototest/build/linux/x64/debug/bundle/data/flutter_assets/kernel_blob.bin
+/home/silver/mototest/build/linux/x64/debug/bundle/data/flutter_assets/AssetManifest.bin
+/home/silver/mototest/build/linux/x64/debug/bundle/data/flutter_assets/AssetManifest.json
+/home/silver/mototest/build/linux/x64/debug/bundle/data/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf
+/home/silver/mototest/build/linux/x64/debug/bundle/data/flutter_assets/version.json
+/home/silver/mototest/build/linux/x64/debug/bundle/data/flutter_assets/NOTICES.Z
+/home/silver/mototest/build/linux/x64/debug/bundle/data/flutter_assets/shaders/ink_sparkle.frag
