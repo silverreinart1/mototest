@@ -7,6 +7,7 @@ class UserProvider extends ChangeNotifier {
   Map<String, dynamic> _userProfile = {};
   bool _isLoading = false;
   String? _error;
+  final bool firebaseEnabled;
 
   User? get currentUser => _currentUser;
   Map<String, dynamic> get userProfile => _userProfile;
@@ -14,8 +15,10 @@ class UserProvider extends ChangeNotifier {
   String? get error => _error;
   bool get isAuthenticated => _currentUser != null;
 
-  UserProvider() {
-    _initializeAuth();
+  UserProvider({required this.firebaseEnabled}) {
+    if (firebaseEnabled) {
+      _initializeAuth();
+    }
   }
 
   void _initializeAuth() {

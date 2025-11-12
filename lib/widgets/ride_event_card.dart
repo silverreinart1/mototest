@@ -16,7 +16,7 @@ class RideEventCard extends StatelessWidget {
       case 'hard':
         return Colors.red;
       default:
-        return Colors.gray;
+        return Colors.grey;
     }
   }
 
